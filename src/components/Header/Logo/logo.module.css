@@ -1,0 +1,9 @@
+.logo_wrapper {
+	margin: 0;
+	font-size: var(--r26);
+}
+
+.logo {
+	white-space: nowrap;
+	color: var(--color-emblem);
+}

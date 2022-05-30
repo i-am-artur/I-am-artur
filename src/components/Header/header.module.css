@@ -1,0 +1,13 @@
+.header {
+	padding: var(--original-gap);
+	justify-content: space-between;
+	align-items: flex-start;
+	position: relative;
+	display: flex;
+	background-color: var(--color-dark);
+}
+
+.options {
+	display: flex;
+	align-items: center;
+}
