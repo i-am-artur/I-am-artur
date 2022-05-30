@@ -20,7 +20,7 @@ export default function Contacts() {
 	return (
 		language && (
 			<>
-				<h1 className={_.heading}>{content.heading[language]}</h1>
+				<h1 className='page_heading'>{content.heading[language]}</h1>
 				<div className={_.content}>
 					<h3>{content.name[language]}</h3>
 					<div className={_.slogan}>{content.slogan[language]}</div>

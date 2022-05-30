@@ -1,21 +1,33 @@
-.heading {
+.cms_list {
 	margin: 0;
-	font-size: var(--r20);
+	padding: 0;
+	list-style-type: none;
+}
+.cms_image {
+	vertical-align: middle;
 }
 
-.content {
-	margin-left: auto;
-	margin-right: auto;
-	row-gap: var(--original-gap);
-	max-width: 600px;
-	flex: 1;
+.cms_list_item {
+	margin: 20px 0;
+}
+
+.technologies {
+	padding: 0;
+	row-gap: 32px;
+	column-gap: var(--original-gap);
+	flex-wrap: wrap;
+	display: flex;
+	list-style-type: none;
+}
+
+.technology {
+	flex: 1 1 45%;
 	flex-direction: column;
 	display: flex;
 	align-items: center;
-	justify-content: center;
 }
 
-.contact__type {
-	display: flex;
-	justify-content: center;
+.technology_image {
+	width: 60%;
+	height: 100%;
 }
