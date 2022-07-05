@@ -1,4 +1,4 @@
-import _ from './language-select.module.css';
+import { Language, LanguageItem, LanguageList } from './language-select.styled';
 
 import { useContext } from 'react';
 
@@ -6,26 +6,20 @@ import { LanguageContext } from '../../../App';
 import { languages } from '../../../constants';
 
 export default function LanguageSelect() {
-	const [language, setLanguage] = useContext(LanguageContext);
-
-	const languageStyles = (lang) => {
-		const styles = [_.language];
-		if (lang === language) styles.push(_.language_selected);
-		return styles.join(' ');
-	};
+	const [appLanguage, setAppLanguage] = useContext(LanguageContext);
 
 	return (
-		<ul className={_.languages}>
+		<LanguageList>
 			{Object.values(languages).map((language) => (
-				<li className={_.language_item} key={language}>
-					<button
-						onClick={() => setLanguage(language)}
-						className={languageStyles(language)}
+				<LanguageItem key={language}>
+					<Language
+						selected={appLanguage === language}
+						onClick={() => setAppLanguage(language)}
 					>
 						{language.toUpperCase()}
-					</button>
-				</li>
+					</Language>
+				</LanguageItem>
 			))}
-		</ul>
+		</LanguageList>
 	);
 }

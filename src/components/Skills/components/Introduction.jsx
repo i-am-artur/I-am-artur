@@ -1,9 +1,11 @@
 import content from '../content';
 import * as PropTypes from 'prop-types';
 
+import { Text } from '../../../common/Styles/global';
+
 export default function Introduction({ language }) {
 	return (
-		<p>
+		<Text>
 			{content.introduction.p1[language]}{' '}
 			<a
 				href={content.introduction.p2.links.epam[language]}
@@ -13,7 +15,7 @@ export default function Introduction({ language }) {
 				&lt;{content.introduction.p2.text}&gt;
 			</a>
 			{content.introduction.p3[language]}
-		</p>
+		</Text>
 	);
 }
 

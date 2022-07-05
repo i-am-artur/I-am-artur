@@ -1,28 +1,39 @@
-import _ from './burger-menu.module.css';
+import './burger-menu.styled.js';
 
 import { useEffect } from 'react';
+import * as PropTypes from 'prop-types';
+import { Burger, BurgerLine } from './burger-menu.styled';
 
 export default function BurgerMenu({ clickedOutside, onClick }) {
 	useEffect(() => {
 		document.addEventListener('click', (event) => {
-			if (!isBurgerMenuClicked(event)) {
+			if (!isBurgerMenuClicked(event, Burger, BurgerLine)) {
 				clickedOutside();
 			}
 		});
 	}, [clickedOutside]);
 
+	//TODO: create burger
 	return (
-		<button className={_.burger} onClick={onClick}>
-			<span className={_.burger_line}></span>
-			<span className={_.burger_line}></span>
-			<span className={_.burger_line}></span>
-		</button>
+		<Burger onClick={onClick}>
+			<BurgerLine />
+			<BurgerLine />
+			<BurgerLine />
+		</Burger>
 	);
 }
 
-function isBurgerMenuClicked(event) {
+BurgerMenu.propTypes = {
+	clickedOutside: PropTypes.func.isRequired,
+	onClick: PropTypes.func.isRequired,
+};
+
+function isBurgerMenuClicked(event, Burger, BurgerLine) {
 	const clickedTarget = event.target;
 	const classList = clickedTarget.classList;
 
-	return classList.contains(_.burger) || classList.contains(_.burger_line);
+	return (
+		classList.contains(Burger.styledComponentId) ||
+		classList.contains(BurgerLine.styledComponentId)
+	);
 }

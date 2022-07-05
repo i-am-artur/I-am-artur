@@ -1,9 +1,9 @@
-import _ from './footer.module.css';
+import { Wrapper } from './footer.styled';
 
 export default function Footer() {
 	return (
-		<footer className={_.footer}>
+		<Wrapper>
 			I am {'{'} Artur {'}'} &copy; 2022
-		</footer>
+		</Wrapper>
 	);
 }

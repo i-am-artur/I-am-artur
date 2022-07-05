@@ -45,52 +45,69 @@ const content = {
 	},
 	technologies: [
 		{
-			image: 'vue.png',
+			isVisible: true,
+			image: 'react.gif',
+			name: 'React',
+		},
+		{
+			isVisible: true,
+			image: 'vue.gif',
 			name: 'Vue',
 		},
 		{
-			image: 'html.png',
+			isVisible: true,
+			image: 'html.gif',
 			name: 'HTML',
 		},
 		{
-			image: 'css-logo.jpg',
+			isVisible: true,
+			image: 'css.gif',
 			name: 'CSS',
 		},
 		{
-			image: 'js.png',
+			isVisible: true,
+			image: 'js.gif',
 			name: 'JavaScript',
 		},
 		{
-			image: 'less.png',
+			isVisible: true,
+			image: 'less.gif',
 			name: 'Less',
 		},
 		{
-			image: 'handlebars.jpg',
+			isVisible: true,
+			image: 'sass.gif',
+			name: 'Sass',
+		},
+		{
+			isVisible: true,
+			image: 'handlebars.gif',
 			name: 'Handlebars',
 		},
 		{
-			image: 'jQuery.png',
+			isVisible: true,
+			image: 'jQuery.gif',
 			name: 'JQuery',
 		},
 		{
-			image: 'webpack.png',
+			isVisible: true,
+			image: 'webpack.gif',
 			name: 'Webpack',
 		},
 		{
-			image: 'git.png',
+			isVisible: true,
+			image: 'git.gif',
 			name: 'Git',
 		},
 		{
-			image: 'PHP-logo.gif',
+			isVisible: true,
+			image: 'php.gif',
 			name: 'PHP',
 		},
 		{
-			image: 'Mysql.gif',
+			isVisible: true,
+			image: 'mysql.gif',
 			name: 'MySql',
-		},
-		{
-			image: 'mariadb.gif',
-			name: 'MariaDB',
 		},
 	],
 };

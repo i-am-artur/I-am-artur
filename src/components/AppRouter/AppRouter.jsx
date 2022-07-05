@@ -8,6 +8,7 @@ import LoadingIndicator from '../../common/LoadingIndicator/LoadingIndicator';
 const Home = lazy(() => import('../Home/Home'));
 const Contacts = lazy(() => import('../Contacts/Contacts'));
 const Skills = lazy(() => import('../Skills/Skills'));
+const Portfolio = lazy(() => import('../Portfolio/Portfolio'));
 
 export default function AppRouter() {
 	return (
@@ -16,6 +17,7 @@ export default function AppRouter() {
 				<Route path={routeList.home} element={<Home />} />
 				<Route path={routeList.contacts} element={<Contacts />} />
 				<Route path={routeList.skills} element={<Skills />} />
+				<Route path={routeList.portfolio} element={<Portfolio />} />
 			</Routes>
 		</Suspense>
 	);

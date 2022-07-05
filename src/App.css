@@ -1,8 +1,0 @@
-.main {
-	padding: var(--original-gap);
-	/*height: 100%;*/
-	flex: 1;
-	flex-direction: column;
-	display: flex;
-	background-color: white;
-}

@@ -1,7 +1,6 @@
-import _ from './logo.module.css';
+import { Heading, HomeLink } from './logo.styled';
 
 import { useContext } from 'react';
-import { Link } from 'react-router-dom';
 
 import { LanguageContext } from '../../../App';
 import routeList from '../../AppRouter/routeList';
@@ -11,10 +10,8 @@ export default function Logo() {
 	const logo = { en: 'I am { Arthur }', ru: 'Я { Артур }' };
 
 	return (
-		<h2 className={_.logo_wrapper}>
-			<Link className={_.logo} to={routeList.home}>
-				{logo[language]}
-			</Link>
-		</h2>
+		<Heading>
+			<HomeLink to={routeList.home}>{logo[language]}</HomeLink>
+		</Heading>
 	);
 }
